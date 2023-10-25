@@ -4,7 +4,9 @@ button{
     padding: 15px 32px;
     font-size: 12px;
     cursor: pointer;
-    margin: 40vh 90vh;
-    
+    margin: auto;
+}
 
+#Numero {
+    margin :20px
 }
