@@ -1,12 +1,12 @@
-button {
-	background-color: blue;
-	color: #fff;
-	padding: 15px 32px;
-	font-size: 12px;
-	cursor: pointer;
-	margin: auto;
+button{
+    background-color: blue;
+    color: #fff;
+    padding: 15px 32px;
+    font-size: 12px;
+    cursor: pointer;
+    margin: auto;
 }
 
 #Numero {
-	margin: 20px;
+    margin :20px
 }

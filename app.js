@@ -24,6 +24,7 @@ function changeNumber(action) {
 
 // reset the two last buttons to initial values
 function Reset() {
+    
     // Reset number
     changeNumber('reset')
 
@@ -34,3 +35,26 @@ function Reset() {
 
 
 // Agrega un boton que cambie los valores internos entre los 2 botones (click here <-> numero)
+function swapValues() {
+	//hacer una variable que contenga el valor interno de boton #Numero
+	let valInterno = document.querySelector("#Numero").innerHTML;
+
+	//hacer una variable que contenga el valor interno de boton #changeB
+	let valReset = document.querySelector("#changeB").innerHTML;
+	//logs
+	console.log(valInterno);
+	console.log(valReset);
+	//poner el valor interno de #Numero en el valor interno de #changeB
+	document.querySelector("#changeB").innerHTML = valInterno;
+    document.querySelector("#Numero").innerHTML = valReset
+	//logs
+	console.log(valInterno);
+	console.log(valReset);
+	//poner el valor interno de #changeB en el valor interno de #Numero
+	valReset = valInterno;
+	//logs
+	console.log(valInterno);
+	console.log(valReset);
+}
+      
+
