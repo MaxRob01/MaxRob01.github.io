@@ -10,9 +10,14 @@ function changeB() {
 	body.style.background = color[colorIndex];
 }
 // add one number to the button
-function addOne() {
+function changeNumber(action) {
 	let interno = document.querySelector("#Numero");
-	interno.innerHTML = Number(interno.innerHTML) + 1;
+
+    if(action == "add"){
+		interno.innerHTML = Number(interno.innerHTML) + 1;
+	} else if (action == 'reset'){
+        interno.innerHTML = 0;
+    }
 }
 
 // Agrega un boton que reinicie el color de fondo y reinicie el valor a 0
@@ -20,8 +25,7 @@ function addOne() {
 // reset the two last buttons to initial values
 function Reset() {
     // Reset number
-    let interno = document.querySelector("#Numero");
-	interno.innerHTML = 0;
+    changeNumber('reset')
 
     // Reset background
     body.style.backgroundColor = "violet";
