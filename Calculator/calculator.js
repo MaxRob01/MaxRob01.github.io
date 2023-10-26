@@ -3,30 +3,35 @@ console.log("works");
 function sumar() {
 	let firstInput = parseInt(document.getElementById("first").value);
 	let secondInput = parseInt(document.getElementById("second").value);
-	let sumInputs = firstInput + secondInput;
-	console.log(sumInputs);
+	let addInputs = firstInput + secondInput;
+	console.log(addInputs);
+
+	document.getElementById("result").innerHTML = addInputs;
 }
 
 function restar() {
 	let firstInput = parseInt(document.getElementById("first").value);
 	let secondInput = parseInt(document.getElementById("second").value);
-	let subInputs = firstInput - secondInput;
-	console.log(subInputs);
+	let addInputs = firstInput - secondInput;
+	console.log(addInputs);
+
+	document.getElementById("result").innerHTML = addInputs;
 }
 
 function multiplicar() {
 	let firstInput = parseInt(document.getElementById("first").value);
 	let secondInput = parseInt(document.getElementById("second").value);
-	let multInputs = firstInput * secondInput;
-	console.log(multInputs);
+	let addInputs = firstInput * secondInput;
+	console.log(addInputs);
+
+	document.getElementById("result").innerHTML = addInputs;
 }
 
 function dividir() {
 	let firstInput = parseInt(document.getElementById("first").value);
 	let secondInput = parseInt(document.getElementById("second").value);
-	let divInputs = firstInput / secondInput;
-	console.log(divInputs);
+	let addInputs = firstInput / secondInput;
+	console.log(addInputs);
+
+	document.getElementById("result").innerHTML = addInputs;
 }
-
-
-
