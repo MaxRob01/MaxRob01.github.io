@@ -13,7 +13,7 @@ function addTask() {
 	let createCheckbox = document.createElement("input");
 	createCheckbox.type = "checkbox";
 	li.appendChild(createCheckbox);
-
+	console.log(createCheckbox);
 	//agregar el valor del input en la <li> usando .createTextNode
 	li.appendChild(document.createTextNode(task));
 
@@ -25,6 +25,14 @@ function addTask() {
 	document.getElementById("enterYourTask").value = "";
 	//console.log(emptyInput);
 
-	console.log(createCheckbox);
 	//hacer que cada item de la lista tenga un boton para remover dicho task
+	let removalButton = document.createElement("button");
+	removalButton.textContent = "removal";
+	removalButton.class = "removalButton";
+	removalButton.onclick = removeButton;
+	li.appendChild(removalButton);
+}
+
+function removeButton() {
+	this.parentElement.remove();
 }
