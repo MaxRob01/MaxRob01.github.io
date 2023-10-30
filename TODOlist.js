@@ -14,6 +14,7 @@ function addTask() {
 	createCheckbox.type = "checkbox";
 	li.appendChild(createCheckbox);
 	console.log(createCheckbox);
+	
 	//agregar el valor del input en la <li> usando .createTextNode
 	li.appendChild(document.createTextNode(task));
 
