@@ -17,7 +17,12 @@
 
 		<input type="text" id="description" placeholder="Description" />
 		<input type="num" id="amount" placeholder="Amount" />
-		<input type="text" list="Category" id='categoryList' placeholder="Select Category" />
+		<input
+			type="text"
+			list="Category"
+			id="categoryList"
+			placeholder="Select Category"
+		/>
 		<datalist id="Category">
 			<option value="Food"></option>
 			<option value="Transportation"></option>
@@ -27,6 +32,16 @@
 		<button onclick="addExpense()" id="addExpense">Add Expense</button>
 
 		<h2>Total Expenses: $ <span id="totalExpenses">0</span></h2>
+        
+        <select name="option" id="filterSelect">
+            <option value="All">All</option>
+            <option value="Transportation">Transportation</option>
+            <option value="Food">Food</option>
+            <option value="Entertaimen">Entertaimen</option>
+            <option value="Other">Other</option>
+        </select>
+        
+
 		<ul id="expensesList"></ul>
 
 		<script src="Exp-Tracker.js"></script>
