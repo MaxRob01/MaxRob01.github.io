@@ -28,15 +28,19 @@ function addExpense() {
 	let ul = document.getElementById("expensesList");
 	ul.appendChild(li);
 
+	// Calculate total expenses and then add expense to its specific category
 	let totalExpenses = document.getElementById("totalExpenses");
-
 	totalExpenses.innerHTML = Number(totalExpenses.innerHTML) + +expense.amount;
+	let subtotal = document.getElementById(`subtotal-${expense.category}`);
+	subtotal.innerHTML = Number(subtotal.innerHTML) + +expense.amount;
 
 	let filterSelect = document.getElementById("filterSelect"); //declaro una variable para guardar el elemento del HTML
 	filterSelect.addEventListener("change", filterExpenses); //agrego el event listener a la variable y asigno la funcion
 	//console.log(filterSelect)
 
 	filterExpenses();
+
+	// Add removal button to each list item
 	let removalButton = document.createElement("button");
 	removalButton.textContent = "removal";
 	removalButton.class = "removalButton";
@@ -48,9 +52,27 @@ function removeButton() {
 }
 
 function filterExpenses() {
+	let categories = ["Transportation", "Food", "Entertainment"];
 	//esta es la funcion que corre el event listener
 	let selectCategory = filterSelect.value; //declaro una variable y le asigno el valor seleccionado en el dropdown
-	console.log(selectCategory);
+
+	document.getElementById("subtotal").style.display = "none";
+
+	// haces un foreach de categories que le de displaynone a cada item en el array
+	
+categories.forEach(cat => {
+		document.getElementById(`subtotal-${cat}`).style.display =
+			"none";
+
+})
+
+	if (categories.includes(selectCategory)) {
+		document.getElementById("subtotal").style.display = "block";
+		document.getElementById(`subtotal-${selectCategory}`).style.display =
+			"block";
+	}
+
+	//console.log(selectCategory);
 	let expensesItems = document.querySelectorAll("#expensesList li"); //selecciona todas las listas dentro de la ul
 	console.log(expensesItems);
 
@@ -60,5 +82,6 @@ function filterExpenses() {
 		} else {
 			item.style.display = "none";
 		}
+		console.log(item.className);
 	});
 }
