@@ -35,23 +35,8 @@ function addExpense() {
 	let filterSelect = document.getElementById("filterSelect"); //declaro una variable para guardar el elemento del HTML
 	filterSelect.addEventListener("change", filterExpenses); //agrego el event listener a la variable y asigno la funcion
 	//console.log(filterSelect)
-	function filterExpenses() {
-		//esta es la funcion que corre el event listener
-		let selectCategory = filterSelect.value; //declaro una variable y le asigno el valor seleccionado en el dropdown
-		console.log(selectCategory);
-		let expensesItems = document.querySelectorAll("#expensesList li"); //selecciona todas las listas dentro de la ul
-		console.log(expensesItems);
 
-		expensesItems.forEach((item) => {
-			if (item.className == selectCategory || selectCategory == 'All'  ) {
-				item.style.display = "";
-
-			} else {
-				item.style.display = "none";
-			}
-		});
-	}
-
+	filterExpenses();
 	let removalButton = document.createElement("button");
 	removalButton.textContent = "removal";
 	removalButton.class = "removalButton";
@@ -60,4 +45,20 @@ function addExpense() {
 }
 function removeButton() {
 	this.parentElement.remove();
+}
+
+function filterExpenses() {
+	//esta es la funcion que corre el event listener
+	let selectCategory = filterSelect.value; //declaro una variable y le asigno el valor seleccionado en el dropdown
+	console.log(selectCategory);
+	let expensesItems = document.querySelectorAll("#expensesList li"); //selecciona todas las listas dentro de la ul
+	console.log(expensesItems);
+
+	expensesItems.forEach((item) => {
+		if (item.className == selectCategory || selectCategory == "All") {
+			item.style.display = "";
+		} else {
+			item.style.display = "none";
+		}
+	});
 }
