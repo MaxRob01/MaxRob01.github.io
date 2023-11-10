@@ -4,14 +4,17 @@
 		<title>My first websitses</title>
 	</head>
 	<body>
-		<div class="navigation">
-			<h3>
-				<a href="index.html">HOME</a>
-			</h3>
-			<h3>
-				<a href="table-page.html">My first table</a>
-			</h3>
-		</div>
+		<header>
+			<div class="navigation">
+				<h3>
+					<a href="index.html">HOME</a>
+				</h3>
+				<h3>
+					<a href="table-page.html">My first table</a>
+				</h3>
+			</div>
+		</header>
+
 		<div class="content">
 			<h1>My First Website</h1>
 			this is my first html website and i'm <b>very excited</b>
@@ -19,54 +22,50 @@
 			<br />
 			<br />
 			<i>this to do a test</i>
-			<br />
-			<b>Beneath the moon's soft silver glow,</b>
-			<br />
-			<u>Whispers of secrets, only night may know.</u>
-			<br />
-			<em>Stars twinkle like diamonds in the sky,</em>
-			<br />
-			<strong>As the world below in slumber lies.</strong>
-			<br />
-			<hr />
-			In the stillness, a breeze does play, <br />
-			<a href="https://www.google.com">Carrying</a> dreams to a faraway
-			bay. <br />
-			In this quiet moment, hearts find peace, <br />
-			A tranquil night's embrace, a sweet release. <br />
-			<img
-				src="https://placehold.co/300x200/EEE/31343C"
-				style="border: 6px solid #6f2626"
-			/>
-			<ul>
-				<li>apples</li>
-				<ol>
-					<li>verdes</li>
-					<li>rojas</li>
-					<li>amarillas</li>
-				</ol>
-				<li>oranges</li>
-				<li>pineapples</li>
-				<li>mangos</li>
-			</ul>
-			<table style="border: 5">
-				<tr>
-					<th>Month</th>
-					<th>Rent</th>
-					<th>Utilities</th>
-					<th>Groceries</th>
-					<th>Eating Out</th>
-					<th>Entretainment</th>
-				</tr>
-				<tr>
-					<td>August</td>
-					<td>$1200</td>
-					<td>$150</td>
-					<td>$350</td>
-					<td>$150</td>
-					<td>$150</td>
-				</tr>
-			</table>
+
+			<div class="list">
+				<ul>
+					<li>apples</li>
+					<ol>
+						<li>verdes</li>
+						<li>rojas</li>
+						<li>amarillas</li>
+					</ol>
+					<li>oranges</li>
+					<li>pineapples</li>
+					<li>mangos</li>
+				</ul>
+			</div>
+
+			<div class="table1">
+				<table style="border: 5">
+					<tr>
+						<th>Month</th>
+						<th>Rent</th>
+						<th>Utilities</th>
+						<th>Groceries</th>
+						<th>Eating Out</th>
+						<th>Entretainment</th>
+					</tr>
+
+					<style>
+						#tab {
+							border: 2px solid black;
+						}
+					</style>
+					<tr id="tab">
+						<td>August</td>
+						<td>$1200</td>
+						<td>$150</td>
+						<td>$350</td>
+						<td>$150</td>
+						<td>$150</td>
+					</tr>
+				</table>
+			</div>
 		</div>
+
+		<br />
+		<footer>&copy; 2023 My Website. All rights reserved.</footer>
 	</body>
 </html>
