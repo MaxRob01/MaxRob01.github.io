@@ -1,53 +1,29 @@
+// Add event listener to Filter select once loading is finished
+window.addEventListener("load", function () {
+	let filterSelect = document.getElementById("filterSelect");
+	filterSelect.addEventListener("change", filterExpenses);
+});
+
 //declarar una funcion para el boton addExpense
 function addExpense() {
-	//declarar un objeto y asignarle el valor de los 3 inputs
-	let expense = {
-		description: document.querySelector("#description").value,
-		amount: document.querySelector("#amount").value,
-		category: document.getElementById("categoryList").value,
-	};
+	// Get user input from form and clear input.
+	let expense = getUserInput();
+	clearInput();
 
-	//declarar una variable y asignarle un list element tag (li)
+	//Crear el list element y agregarlo a la UL
+	createListElement(expense);
 
-	let li = document.createElement("li");
-	//console.log(li)
-	//console.log(typeof li);
-	li.textContent = `${expense.description}: $${expense.amount} - ${expense.category}`;
-
-	//step 0: add a class to each li element that you create programmatically.
-	//console.log(typeof li.className)
-	li.className = expense.category;
-	//console.log( li.className);
-
-	//agregar una funcion que borre el contenido de los inputs
-	document.querySelector("#description").value = "";
-	document.querySelector("#amount").value = "";
-	document.getElementById("categoryList").value = "";
-
-	// agregar el nuevo li al UL que tengo en el DOM, que tiene la id expensesList
-	let ul = document.getElementById("expensesList");
-	ul.appendChild(li);
-
-	// Calculate total expenses and then add expense to its specific category
-	let totalExpenses = document.getElementById("totalExpenses");
-	totalExpenses.innerHTML = Number(totalExpenses.innerHTML) + +expense.amount;
-	let subtotal = document.getElementById(`subtotal-${expense.category}`);
-	subtotal.innerHTML = Number(subtotal.innerHTML) + +expense.amount;
-
-	let filterSelect = document.getElementById("filterSelect"); //declaro una variable para guardar el elemento del HTML
-	filterSelect.addEventListener("change", filterExpenses); //agrego el event listener a la variable y asigno la funcion
-	//console.log(filterSelect)
+	// Actualizar total y subtotal expenses
+	updateExpenseAmount(expense.amount, expense.category);
 
 	filterExpenses();
-
-	// Add removal button to each list item
-	let removalButton = document.createElement("button");
-	removalButton.textContent = "removal";
-	removalButton.class = "removalButton";
-	removalButton.onclick = removeButton;
-	li.appendChild(removalButton);
 }
+
 function removeButton() {
+	var amount = this.previousElementSibling.innerText;
+	var category = this.parentElement.className;
+	console.log(category);
+	updateExpenseAmount(-amount, category);
 	this.parentElement.remove();
 }
 
@@ -59,12 +35,10 @@ function filterExpenses() {
 	document.getElementById("subtotal").style.display = "none";
 
 	// haces un foreach de categories que le de displaynone a cada item en el array
-	
-categories.forEach(cat => {
-		document.getElementById(`subtotal-${cat}`).style.display =
-			"none";
 
-})
+	categories.forEach((cat) => {
+		document.getElementById(`subtotal-${cat}`).style.display = "none";
+	});
 
 	if (categories.includes(selectCategory)) {
 		document.getElementById("subtotal").style.display = "block";
@@ -72,9 +46,7 @@ categories.forEach(cat => {
 			"block";
 	}
 
-	//console.log(selectCategory);
 	let expensesItems = document.querySelectorAll("#expensesList li"); //selecciona todas las listas dentro de la ul
-	console.log(expensesItems);
 
 	expensesItems.forEach((item) => {
 		if (item.className == selectCategory || selectCategory == "All") {
@@ -82,6 +54,46 @@ categories.forEach(cat => {
 		} else {
 			item.style.display = "none";
 		}
-		console.log(item.className);
 	});
+}
+
+function getUserInput() {
+	let expense = {
+		description: document.querySelector("#description").value,
+		amount: document.querySelector("#amount").value,
+		category: document.getElementById("categoryList").value,
+	};
+
+	return expense;
+}
+
+function clearInput() {
+	document.querySelector("#description").value = "";
+	document.querySelector("#amount").value = "";
+	document.getElementById("categoryList").value = "";
+}
+
+function createListElement(expense) {
+	let li = document.createElement("li");
+	li.innerHTML = `${expense.description}: $<span class="price">${expense.amount}</span> - ${expense.category}`;
+	li.className = expense.category;
+
+	// Add removal button to each list item
+	let removalButton = document.createElement("button");
+	removalButton.textContent = "Remove";
+	removalButton.class = "removalButton";
+	removalButton.onclick = removeButton;
+	li.appendChild(removalButton);
+
+	let ul = document.getElementById("expensesList");
+	ul.appendChild(li);
+}
+
+function updateExpenseAmount(amount, category) {
+	// Calculate total expenses and then add expense to its specific category
+	let totalExpenses = document.getElementById("totalExpenses");
+	totalExpenses.innerHTML = Number(totalExpenses.innerHTML) + +amount;
+
+	let subtotal = document.getElementById(`subtotal-${category}`);
+	subtotal.innerHTML = Number(subtotal.innerHTML) + +amount;
 }
