@@ -1,33 +1,41 @@
-body{
-	
+body {
+	height: 100%;
 	margin: 0;
 	font-family: monospace;
+}
+
+header {
+	margin-left: 5px;
+	background-color: rgb(118, 175, 201);
+	max-width: 100%;
+	padding: 1%;
 }
 
 .navigation {
 	display: flex;
 	flex-direction: column;
 	width: 100vw;
-	height: 0vw;;
+	height: 0vw;
 	background-color: rgb(253, 251, 251);
 	border: 1px solid whitesmoke;
 	padding: 0;
 }
-.ulist{
-	padding: 0;
+
+.ulist {
+	border: 1px solid rgb(126, 122, 122);
+	background-color: white;
+	padding: 20px;
 	margin-left: 5px;
 	width: 150px;
-	height: 4000px;
 }
 
 .menu {
 	display: flex;
 	font-size: 14px;
 	text-align: center;
-	text-decoration: none;
-	margin-bottom: 5%; 
-	background-color:rgb(118, 175,201);
-	border: 1px solid whitesmoke;
+	margin-bottom: 5%;
+	background-color: rgb(118, 175, 201);
+	border: 1px solid rgb(118, 175, 201);
 	border-radius: 5px;
 	padding: 2%;
 	justify-content: center;
@@ -40,15 +48,15 @@ body{
 
 h2 {
 	text-align: center;
-	height: 5vw;
-	width: 45vw;
+	max-height: 35px;
+	max-width: 100%;
 }
 
 #max {
 	border: 1px solid rgb(118, 175, 201);
 	border-radius: 5px;
 	background-color: rgb(118, 175, 201);
-	width: 15%;
+	width: 100px;
 	font-size: 150%;
 	font-weight: 400;
 	text-decoration: none;
@@ -57,7 +65,6 @@ h2 {
 #pixel {
 	width: 60px;
 	height: 60px;
-	vertical-align: middle;
 }
 
 .titulos {
@@ -65,11 +72,34 @@ h2 {
 	align-items: center;
 	justify-content: center;
 }
+
 .content {
-	width: 30vw;
-	flex: 1;
+	max-width: 250px;
+	min-width: 10px;
 	padding: 20px;
-	margin-left: 30vw;
+	margin-left: 30%;
+}
+
+.contenido h4,
+p {
+	text-align: center;
+}
+
+.button {
+	display: flex;
+	justify-content: center;
+}
+
+.list {
+	display: flex;
+	justify-content: center;
+}
+
+footer {
+	background-color: rgb(118, 175, 201);
+	max-width: 100%;
+	max-height: 100px;
+	padding: 1%;
 }
 
 img {
@@ -97,25 +127,4 @@ img {
 		transform: translateX(10px);
 	}
 
-}
-
-.contenido h4,
-p {
-	text-align: center;
-}
-
-.button {
-	display: flex;
-	justify-content: center;
-}
-
-.list {
-	display: flex;
-	justify-content: center;
-}
-footer {
-	background-color: rgb(118, 175, 201);
-	width: 100%;
-	padding: 1%;
-	
 }
