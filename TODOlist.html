@@ -21,48 +21,53 @@
 				max-width: 100%;
 				max-height: 100px;
 				padding: 1%;
+					text-align: center;
+				margin-top: 300px;
+			}
+			.input{
+				text-align: center;
+	}
+
+			.navigation {
+				display: flex;
+				flex-direction: column;
+				width: 100vw;
+				height: 0vw;
+				background-color: rgb(253, 251, 251);
+				border: 1px solid whitesmoke;
+				padding: 0;
 			}
 
-.navigation {
-	display: flex;
-	flex-direction: column;
-	width: 100vw;
-	height: 0vw;
-	background-color: rgb(253, 251, 251);
-	border: 1px solid whitesmoke;
-	padding: 0;
-}
+			.ulist {
+				border: 1px solid rgb(126, 122, 122);
+				background-color: white;
+				padding: 20px;
+				margin-left: 5px;
+				width: 150px;
+			}
 
-.ulist {
-	border: 1px solid rgb(126, 122, 122);
-	background-color: white;
-	padding: 20px;
-	margin-left: 5px;
-	width: 150px;
-}
+			.menu {
+				display: flex;
+				font-size: 14px;
+				text-align: center;
+				margin-bottom: 5%;
+				background-color: rgb(118, 175, 201);
+				border: 1px solid rgb(118, 175, 201);
+				border-radius: 5px;
+				padding: 2%;
+				justify-content: center;
+			}
 
-.menu {
-	display: flex;
-	font-size: 14px;
-	text-align: center;
-	margin-bottom: 5%;
-	background-color: rgb(118, 175, 201);
-	border: 1px solid rgb(118, 175, 201);
-	border-radius: 5px;
-	padding: 2%;
-	justify-content: center;
-}
+			.menu a:hover {
+				background-color: #f0f0f0;
+				text-decoration: none;
+			}
 
-.menu a:hover {
-	background-color: #f0f0f0;
-	text-decoration: none;
-}
-
-h2 {
-	text-align: center;
-	max-height: 35px;
-	max-width: 100%;
-}
+			h2 {
+				text-align: center;
+				max-height: 35px;
+				max-width: 100%;
+			}
 		</style>
 		<header>TODO List</header>
 
@@ -106,10 +111,10 @@ h2 {
 	
 
 		<h2>Add your task!</h2>
-
+<div class="input">
 		<input type="text" id="enterYourTask" />
 		<button id="addTask" onclick="addTask()">Add Task</button>
-
+</div>
 		<h2>My tasks:</h2>
 
 		<ul id="taskList"></ul>
