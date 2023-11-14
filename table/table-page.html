@@ -9,7 +9,7 @@
 				font-family: monospace;
 			}
 			header {
-				margin-left: 5px;
+				text-align: center;
 				background-color: rgb(118, 175, 201);
 				max-width: 100%;
 				padding: 1%;
@@ -17,7 +17,7 @@
 			.content {
 				margin-left: 40%;
 			}
-		
+
 			footer {
 				background-color: rgb(118, 175, 201);
 				max-width: 100%;
@@ -67,6 +67,10 @@
 				max-height: 35px;
 				max-width: 100%;
 			}
+			.table1 {
+				border: 2px solid black;
+				max-width: 450px;
+			}
 		</style>
 		<header>
 			<h1>Table</h1>
@@ -74,16 +78,23 @@
 
 		<div class="navigation">
 			<ul class="ulist">
-				<li class="menu"><a href="index.html">Home</a></li>
+				<li class="menu">
+					<a href="https://bytebitechef.github.io/index/index.html"
+						>Home</a
+					>
+				</li>
 				&nbsp;
 				<li class="menu">
-					<a href="table-page.html">My first table</a>
+					<a
+						href="https://bytebitechef.github.io/table/table-page.html"
+						>My first table</a
+					>
 				</li>
 				&nbsp;
 
 				<li class="menu">
 					<a
-						href="https://bytebitechef.github.io/Calculator/calculator.html"
+						href="https://bytebitechef.github.io/calculator/calculator.html"
 					>
 						My first calculator
 					</a>
@@ -91,14 +102,18 @@
 				&nbsp;
 
 				<li class="menu">
-					<a href="https://bytebitechef.github.io/TODOlist.html">
+					<a
+						href="https://bytebitechef.github.io/todo-list/TODOlist.html"
+					>
 						My first TODO list
 					</a>
 				</li>
 				&nbsp;
 
 				<li class="menu">
-					<a href="https://bytebitechef.github.io/Exp-Tracker.html">
+					<a
+						href="https://bytebitechef.github.io/exp-tracker/Exp-Tracker.html"
+					>
 						My first Expenses tracker
 					</a>
 				</li>
@@ -127,7 +142,7 @@
 			</div>
 
 			<div class="table1">
-				<table style="border: 5">
+				<table>
 					<tr>
 						<th>Month</th>
 						<th>Rent</th>
@@ -137,12 +152,7 @@
 						<th>Entretainment</th>
 					</tr>
 
-					<style>
-						#tab {
-							border: 2px solid black;
-						}
-					</style>
-					<tr id="tab">
+					<tr class="table1">
 						<td>August</td>
 						<td>$1200</td>
 						<td>$150</td>
