@@ -12,12 +12,12 @@
 		/>
 	</head>
 	<body>
-		<div class="container">
+		<div class="container p-0" style="max-width: 100%;">
 			<header class="p-4 bg-primary bg-gradient text-white text-center">
 				<h1>TODO list</h1>
 			</header>
 			<div class="row">
-				<div class="col-2 mt-5 mb-5">
+				<div class="col-3 mt-5 mb-5">
 					<ul class="ulist list-group">
 						<li
 							class="menu list-group-item list-group-item-action m-1 bg-primary bg-gradient"
@@ -73,23 +73,23 @@
 						</li>
 					</ul>
 				</div>
-				<div class="col mt-5">
-					<div class="card" style="width: 18rem">
+				<div class="col-8 mt-5">
+					<div class="card" style="width: 100%">
 						<div class="card-body">
 							<h5 class="card-title">Add your task!</h5>
 							<p class="card-text input">
-								<input type="text" id="enterYourTask" />
+								<input type="text" id="enterYourTask" style="width: 90%;"/>
 							</p>
 							<button
 								class="btn btn-primary bg-gradient"
 								id="addTask"
 								onclick="addTask()"
 							>
-								Add Task
+								<p class="m-0">Add Task</p>
 							</button>
 						</div>
 					</div>
-					<div class="card mt-2" style="width: 18rem">
+					<div class="card mt-2" style="width: 100%">
 						<div class="card-body p-2 ms-2">
 							<h5>My tasks:</h5>
 							<ul id="taskList"></ul>
@@ -97,7 +97,7 @@
 					</div>
 				</div>
 			</div>
-			<footer class="p-4 bg-primary bg-gradient text-white text-center">
+			<footer class="p-4 bg-primary bg-gradient text-white text-center fixed-bottom">
 				&copy; 2023 My Website. All rights reserved.
 			</footer>
 		</div>

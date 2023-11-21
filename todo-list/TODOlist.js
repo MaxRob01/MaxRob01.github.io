@@ -29,6 +29,8 @@ function addTask() {
 		"m-2"
 	);
 	li.style.backgroundColor = "#f4f6f7";
+	li.style.display = "flex";
+	li.style.justifyContent = "space-between";
 
 	//hacer que el input se vacie cada vez que hago click en el boton
 	document.getElementById("enterYourTask").value = "";
@@ -39,8 +41,6 @@ function addTask() {
 	removalButton.textContent = "removal";
 	removalButton.classList.add(
 		"removalButton",
-		"d-flex",
-		"justify-content-end",
 		"btn",
 		"btn-primary",
 		"bg-gradient",
