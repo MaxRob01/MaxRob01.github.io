@@ -13,14 +13,22 @@ function addTask() {
 	let createCheckbox = document.createElement("input");
 	createCheckbox.type = "checkbox";
 	li.appendChild(createCheckbox);
-	console.log(createCheckbox);
-	
+	createCheckbox.classList.add("m-2");
+
 	//agregar el valor del input en la <li> usando .createTextNode
 	li.appendChild(document.createTextNode(task));
 
 	// agregar el nuevo li al UL que tengo en el DOM, que tiene la id taskList
 	let ul = document.getElementById("taskList");
 	ul.appendChild(li);
+	ul.classList.add("p-0");
+	li.classList.add(
+		"list-group-item",
+		"border-0",
+		"rounded",
+		"m-2"
+	);
+	li.style.backgroundColor = "#f4f6f7";
 
 	//hacer que el input se vacie cada vez que hago click en el boton
 	document.getElementById("enterYourTask").value = "";
@@ -31,6 +39,8 @@ function addTask() {
 	removalButton.textContent = "removal";
 	removalButton.classList.add(
 		"removalButton",
+		"d-flex",
+		"justify-content-end",
 		"btn",
 		"btn-primary",
 		"bg-gradient",
