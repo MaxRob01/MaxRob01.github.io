@@ -29,7 +29,14 @@ function addTask() {
 	//hacer que cada item de la lista tenga un boton para remover dicho task
 	let removalButton = document.createElement("button");
 	removalButton.textContent = "removal";
-	removalButton.class = "removalButton";
+	removalButton.classList.add(
+		"removalButton",
+		"btn",
+		"btn-primary",
+		"bg-gradient",
+		"ms-2",
+		"btn-sm"
+	);
 	removalButton.onclick = removeButton;
 	li.appendChild(removalButton);
 }
