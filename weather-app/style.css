@@ -1,0 +1,33 @@
+body {
+    display: flex;
+    
+}
+.btn {
+    background-color: #84a59d;
+    border:#f28482; 
+}
+.btn:hover {
+    background-color: #A1BAB4;
+}
+.info {
+    background-color: rgb(229, 229, 229, 0.5);
+    display: inline-block;
+    width: 40%;
+    height: 200px;
+    border: #fff;
+    border-radius: 20px;
+}
+h3 {
+    display: flex;
+    justify-content: center;
+    margin-top: 165px;
+    font-size: 20px;
+    font-weight: 100;
+}
+
+.main-card {
+    display: flex;
+    justify-content: center;
+    max-width: 300px;  
+    min-height: 200px; 
+}
