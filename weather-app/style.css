@@ -6,14 +6,11 @@
     background: linear-gradient(#ABC7D9, #003049);
 }
 
-.inputButtonContainer {
-    display: inline;
-
-}
 
 h1 {
+
     margin-top: 10px;
-    font-size: x-large;
+    font-size: 40px;
     font-weight: 400;
     text-align: center;
     color: #FEF8EC;
@@ -42,7 +39,7 @@ input {
 .weatherInfoContainer {
     background-color: rgb(255, 255, 255, 0.3);
     display: inline-block;
-    width: 40%;
+    width: 200px;
     height: 200px;
     margin: 10px;
     border-radius: 20px;
@@ -54,14 +51,23 @@ h3 {
     justify-content: center;
     margin-top: 165px;
     font-size: 20px;
-    font-weight: 100;
+    font-weight: 170;
+    color: #FDF0D5;
 }
 
 .main-card {
+    
     max-width: 300px;
     min-height: 200px;
     background: rgba(255, 255, 255, 0.8);
     border: #fff;
     border-radius: 10px;
+}
 
+footer {
+    display: flex;
+    justify-content: center;
+    color: #FEF8EC;
+    margin-top: 20px;
+    padding: 50px;
 }
