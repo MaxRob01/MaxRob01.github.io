@@ -1,15 +1,13 @@
-console.log("works");
-
 function getCity() {
 	var city = document.getElementById("yourCity").value;
-    getWeatherInfo(city);
+	getWeatherInfo(city);
 	console.log(city);
 }
 
 async function getWeatherInfo(city) {
 	try {
 		let response = await fetch(
-			`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=b2a35c7e3ce0d3c6cf840c45396ced43`
+			`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=b2a35c7e3ce0d3c6cf840c45396ced43`
 		);
 
 		if (!response.ok) {
@@ -25,4 +23,3 @@ async function getWeatherInfo(city) {
 	}
 }
 
-getWeatherInfo(city);
