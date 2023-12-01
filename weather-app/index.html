@@ -13,13 +13,14 @@
 		<link rel="stylesheet" type="text/css" href="style.css" />
 	</head>
 	<body>
-		<div class="container mw-100">
+		<div class="container">
+			
 			<header>
 				<h1>Weather</h1>
 			</header>
 			<div class="row">
 				<div class="col">
-					<div>
+					<div class="inputButtonContainer">
 						<input class="m-2" type="text" />
 						<button class="btn btn-primary">submit</button>
 					</div>
@@ -28,23 +29,23 @@
 					</div>
 				</div>
 				<div class="row">
-					<div class="weather-info">
+					<div class="weatherInfo">
 						<div class="col-md-6">
-							<div class="info m-2" id="precipitation">
+							<div class="weatherInfoContainer m-2" id="precipitation">
 								<h3>Precipitation</h3>
 								<p id="precipitation-value"></p>
 							</div>
-							<div class="info m-2" id="visibility">
+							<div class="weatherInfoContainer m-2" id="visibility">
 								<h3>Visibility</h3>
 								<p id="visibility-value"></p>
 							</div>
 						</div>
 						<div class="col-md-6">
-							<div class="info m-2" id="feels-like">
+							<div class="weatherInfoContainer m-2" id="feels-like">
 								<h3>Feels Like</h3>
 								<p id="feels-like-value"></p>
 							</div>
-							<div class="info m-2" id="humidity">
+							<div class="weatherInfoContainer m-2" id="humidity">
 								<h3>Humidity</h3>
 								<p id="humidity-value"></p>
 							</div>
