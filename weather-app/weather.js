@@ -2,6 +2,7 @@ console.log("works");
 
 function getCity() {
 	var city = document.getElementById("yourCity").value;
+    getWeatherInfo(city);
 	console.log(city);
 }
 
