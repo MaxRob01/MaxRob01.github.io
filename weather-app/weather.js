@@ -1,7 +1,7 @@
 function getCity() {
 	var city = document.getElementById("yourCity").value;
-	getWeatherInfo(city);
 	console.log(city);
+	return city;
 }
 
 async function getWeatherInfo(city) {
@@ -15,11 +15,29 @@ async function getWeatherInfo(city) {
 		}
 
 		let data = await response.json();
-		console.log("###############the result is:");
-		console.log(data);
+
 		return data;
 	} catch (error) {
 		console.error("Error fetching weather data: ", error);
 	}
 }
 
+async function handleRequest() {
+	var city = getCity();
+	var weatherInfo = await getWeatherInfo(city);
+	insertWeather(weatherInfo);
+}
+
+function insertWeather(weatherInfo) {
+	var temperture = weatherInfo.main.temp;
+	var humidity = weatherInfo.main.humidity;
+	var tempMax = weatherInfo.main.temp_max;
+	var tempMin = weatherInfo.main.temp_min;
+	var feelsLike = weatherInfo.main.feels_like;
+
+	document.getElementById("tempertureMax-value").innerHTML = tempMax;
+	document.getElementById("tempertureMin-value").innerHTML = tempMin;
+	document.getElementById("feels-like-value").innerHTML = feelsLike;
+	document.getElementById("humidity-value").innerHTML = humidity;
+	document.getElementById("mainTempCard").innerHTML = temperture;
+}
