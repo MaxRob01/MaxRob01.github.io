@@ -35,8 +35,6 @@ input {
     margin-bottom: 5px;
 }
 
-
-
 .btn:hover {
     background-color: #A1BAB4;
 }
@@ -50,11 +48,14 @@ input {
     border-radius: 20px;
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 1px 8px 0 rgba(0, 0, 0, 0.19);
 }
+h2 {
+    color: #FDF0D5;
+}
 
 h3 {
     display: flex;
     justify-content: center;
-    margin-top: 165px;
+ 
     font-size: 20px;
     font-weight: 170;
     color: #FDF0D5;
@@ -66,6 +67,12 @@ h3 {
     background: rgba(255, 255, 255, 0.1);
     border: #fff;
     border-radius: 10px;
+}
+
+h4 {
+    display: flex;
+    justify-content: center;
+    color: #FDF0D5;
 }
 
 footer {

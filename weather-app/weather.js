@@ -15,7 +15,7 @@ async function getWeatherInfo(city) {
 		}
 
 		let data = await response.json();
-
+		console.log(data);
 		return data;
 	} catch (error) {
 		console.error("Error fetching weather data: ", error);
@@ -34,10 +34,14 @@ function insertWeather(weatherInfo) {
 	var tempMax = weatherInfo.main.temp_max;
 	var tempMin = weatherInfo.main.temp_min;
 	var feelsLike = weatherInfo.main.feels_like;
+	var weatherIcon = weatherInfo.weather[0].icon;
+	var icon = `<img src="http://openweathermap.org/img/wn/${weatherIcon}@2x.png" width="50px" height="50px" alt="">`;
 
+	console.log(weatherIcon);
 	document.getElementById("tempertureMax-value").innerHTML = tempMax;
 	document.getElementById("tempertureMin-value").innerHTML = tempMin;
 	document.getElementById("feels-like-value").innerHTML = feelsLike;
 	document.getElementById("humidity-value").innerHTML = humidity;
 	document.getElementById("mainTempCard").innerHTML = temperture;
+	document.getElementById("iconWeather").innerHTML = icon;
 }
