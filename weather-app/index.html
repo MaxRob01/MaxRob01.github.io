@@ -29,59 +29,64 @@
 				<h1>Weather</h1>
 			</header>
 			<div class="row">
-				<div class="col ms-5">
-					<div class="inputButtonContainer d-inline">
-						<input class="" id="yourCity" type="text" />
-						<button
-							onclick="handleRequest()"
-							class="btn btn-primary"
-						>
-							submit
-						</button>
+				<div class="col">
+					<div class="buttonCardContainer">
+						<div class="inputButtonContainer d-inline">
+							<input class="" id="yourCity" type="text" />
+							<button
+								onclick="handleRequest()"
+								class="btn btn-primary"
+							>
+								submit
+							</button>
+						</div>
+						<div class="card main-card">
+							<p id="iconWeather"></p>
+							<h2 id="mainTempCard"></h2>
+						</div>
 					</div>
-					<div class="card main-card">
-						<p id="iconWeather"></p>
-						<h2 id="mainTempCard"></h2>
+					<div class="weatherInfo">
+						<div class="row">
+							<div
+								class="card weatherInfoContainer"
+								id="tempertureMax"
+							>
+								<h4 id="tempertureMax-value"></h4>
+								<h3>Max Temp</h3>
+							</div>
 
-						<div class="card-body"></div>
+							<div
+								class="card weatherInfoContainer"
+								id="tempertureMin"
+							>
+								<h4 id="tempertureMin-value"></h4>
+								<h3>Min Temp</h3>
+							</div>
+						</div>
+						<div class="row">
+							<div
+								class="card weatherInfoContainer"
+								id="feels-like"
+							>
+								<h4 id="feels-like-value"></h4>
+								<h3>Feels Like</h3>
+							</div>
+							<div
+								class="card weatherInfoContainer"
+								id="humidity"
+							>
+								<h4 id="humidity-value"></h4>
+								<h3>Humidity</h3>
+							</div>
+						</div>
 					</div>
+				</div>
+				<div class="col">
+					<div id="mapContainer"></div>
 				</div>
 			</div>
-			<div class="row">
-				<div class="weatherInfo">
-					<div class="row-lg-6">
-						<div
-							class="card weatherInfoContainer"
-							id="tempertureMax"
-						>
-							<h4 id="tempertureMax-value"></h4>
-							<h3>Max Temp</h3>
-						</div>
-						<div
-							class="card weatherInfoContainer"
-							id="tempertureMin"
-						>
-							<h4 id="tempertureMin-value"></h4>
-							<h3>Min Temp</h3>
-						</div>
-					</div>
-					<div class="row-lg-6">
-						<div class="card weatherInfoContainer" id="feels-like">
-							<h4 id="feels-like-value"></h4>
-							<h3>Feels Like</h3>
-						</div>
-						<div class="card weatherInfoContainer" id="humidity">
-							<h4 id="humidity-value"></h4>
-							<h3>Humidity</h3>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-6">
-				<div id="mapContainer"></div>
-				</div>
-			</div>
 
-			<footer>© 2020 Company - All Rights Reserved.</footer>
+			<footer>© 2023 Bytebitechef - All Rights Reserved.</footer>
 			<script src="weather.js"></script>
 		</div>
 	</body>

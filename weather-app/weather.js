@@ -41,7 +41,7 @@ function insertWeather(weatherInfo) {
 	var tempMin = weatherInfo.main.temp_min;
 	var feelsLike = weatherInfo.main.feels_like;
 	var weatherIcon = weatherInfo.weather[0].icon;
-	var icon = `<img src="http://openweathermap.org/img/wn/${weatherIcon}@2x.png" width="50px" height="50px" alt="">`;
+	var icon = `<img src="http://openweathermap.org/img/wn/${weatherIcon}@2x.png" width="80px" height="80px" alt="">`;
 
 	document.getElementById("tempertureMax-value").innerHTML = tempMax;
 	document.getElementById("tempertureMin-value").innerHTML = tempMin;
@@ -62,6 +62,7 @@ function getlatLong(ev) {
 	var latLong = { latitude: ev.latlng.lat, longitude: ev.latlng.lng };
 	return latLong;
 }
+
 map.on("click", handleClickOnMap);
 
 async function handleClickOnMap(ev) {
