@@ -37,7 +37,6 @@ function insertWeather(weatherInfo) {
 	var weatherIcon = weatherInfo.weather[0].icon;
 	var icon = `<img src="http://openweathermap.org/img/wn/${weatherIcon}@2x.png" width="50px" height="50px" alt="">`;
 
-	console.log(weatherIcon);
 	document.getElementById("tempertureMax-value").innerHTML = tempMax;
 	document.getElementById("tempertureMin-value").innerHTML = tempMin;
 	document.getElementById("feels-like-value").innerHTML = feelsLike;
@@ -45,3 +44,6 @@ function insertWeather(weatherInfo) {
 	document.getElementById("mainTempCard").innerHTML = temperture;
 	document.getElementById("iconWeather").innerHTML = icon;
 }
+
+var map = L.map("mapContainer").setView([0, 0], 0);
+L.titleLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png?", {}).addTo(map);

@@ -75,6 +75,11 @@ h4 {
     color: #FDF0D5;
 }
 
+#mapContainer {
+
+    height: 300px;
+    width: 400px;
+}
 footer {
     display: flex;
     justify-content: center;

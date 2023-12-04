@@ -11,6 +11,17 @@
 			crossorigin="anonymous"
 		/>
 		<link rel="stylesheet" type="text/css" href="style.css" />
+		<link
+			rel="stylesheet"
+			href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+			integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+			crossorigin=""
+		/>
+		<script
+			src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+			integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+			crossorigin=""
+		></script>
 	</head>
 	<body>
 		<div class="container">
@@ -31,24 +42,30 @@
 					<div class="card main-card">
 						<p id="iconWeather"></p>
 						<h2 id="mainTempCard"></h2>
-					
+
 						<div class="card-body"></div>
 					</div>
 				</div>
 			</div>
 			<div class="row">
 				<div class="weatherInfo">
-					<div class="col-lg-6">
-						<div class="card weatherInfoContainer" id="tempertureMax">
+					<div class="row-lg-6">
+						<div
+							class="card weatherInfoContainer"
+							id="tempertureMax"
+						>
 							<h4 id="tempertureMax-value"></h4>
 							<h3>Max Temp</h3>
 						</div>
-						<div class="card weatherInfoContainer" id="tempertureMin">
+						<div
+							class="card weatherInfoContainer"
+							id="tempertureMin"
+						>
 							<h4 id="tempertureMin-value"></h4>
 							<h3>Min Temp</h3>
 						</div>
 					</div>
-					<div class="col-lg-6">
+					<div class="row-lg-6">
 						<div class="card weatherInfoContainer" id="feels-like">
 							<h4 id="feels-like-value"></h4>
 							<h3>Feels Like</h3>
@@ -58,6 +75,9 @@
 							<h3>Humidity</h3>
 						</div>
 					</div>
+				</div>
+				<div class="col">
+				<div id="mapContainer"></div>
 				</div>
 			</div>
 
