@@ -93,7 +93,31 @@ h4 {
     color: #FDF0D5;
 }
 
-#mapContainer {
+.mapContainer {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 475px;
+    padding-top: 45px;
+    padding-bottom: 10px;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    border: #fff;
+    border-radius: 10px;
+}
+
+h5 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 10px;
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: 170;
+    color: #FDF0D5;
+}
+
+#map {
     display: flex;
     justify-content: end;
     height: 400px;

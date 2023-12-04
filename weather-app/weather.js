@@ -21,7 +21,7 @@ async function getWeatherInfo(locationData, type) {
 		}
 
 		let data = await response.json();
-
+		console.log(data)
 		return data;
 	} catch (error) {
 		console.error("Error fetching weather data: ", error);
@@ -51,7 +51,7 @@ function insertWeather(weatherInfo) {
 	document.getElementById("iconWeather").innerHTML = icon;
 }
 
-var map = L.map("mapContainer").setView([0, 0], 1);
+var map = L.map("map").setView([0, 0], 1);
 L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
 	maxZoom: 19,
 	attribution:
