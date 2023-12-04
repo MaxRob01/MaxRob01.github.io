@@ -69,6 +69,7 @@ map.on("click", handleClickOnMap);
 
 async function handleClickOnMap(ev) {
 	var latLng = getlatLong(ev);
+	document.getElementById("title").innerHTML = "Weather";
 	var weatherInfo = await getWeatherInfo(latLng, "coords");
 
 	insertWeather(weatherInfo);
