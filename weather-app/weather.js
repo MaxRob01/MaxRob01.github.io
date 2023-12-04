@@ -1,21 +1,27 @@
 function getCity() {
 	var city = document.getElementById("yourCity").value;
-	console.log(city);
+
 	return city;
 }
 
-async function getWeatherInfo(city) {
+async function getWeatherInfo(locationData, type) {
 	try {
-		let response = await fetch(
-			`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=b2a35c7e3ce0d3c6cf840c45396ced43`
-		);
-
+		let response;
+		if (type == "city") {
+			response = await fetch(
+				`https://api.openweathermap.org/data/2.5/weather?q=${locationData}&units=metric&appid=b2a35c7e3ce0d3c6cf840c45396ced43`
+			);
+		} else if (type == "coords") {
+			response = await fetch(
+				`https://api.openweathermap.org/data/2.5/weather?lat=${locationData.latitude}&lon=${locationData.longitude}&units=metric&appid=b2a35c7e3ce0d3c6cf840c45396ced43`
+			);
+		}
 		if (!response.ok) {
 			throw new Error(`HTTP error! status: ${response.status}`);
 		}
 
 		let data = await response.json();
-		console.log(data);
+
 		return data;
 	} catch (error) {
 		console.error("Error fetching weather data: ", error);
@@ -24,7 +30,7 @@ async function getWeatherInfo(city) {
 
 async function handleRequest() {
 	var city = getCity();
-	var weatherInfo = await getWeatherInfo(city);
+	var weatherInfo = await getWeatherInfo(city, "city");
 	insertWeather(weatherInfo);
 }
 
@@ -45,9 +51,23 @@ function insertWeather(weatherInfo) {
 	document.getElementById("iconWeather").innerHTML = icon;
 }
 
-var map = L.map("mapContainer").setView([0, 0], 0);
+var map = L.map("mapContainer").setView([0, 0], 1);
 L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
 	maxZoom: 19,
 	attribution:
 		'&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
 }).addTo(map);
+
+function getlatLong(ev) {
+	var latLong = { latitude: ev.latlng.lat, longitude: ev.latlng.lng };
+	return latLong;
+}
+map.on("click", handleClickOnMap);
+
+async function handleClickOnMap(ev) {
+	var latLng = getlatLong(ev);
+	var weatherInfo = await getWeatherInfo(latLng, "coords");
+	insertWeather(weatherInfo);
+
+	console.log(weatherInfo);
+}
