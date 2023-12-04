@@ -76,7 +76,8 @@ h4 {
 }
 
 #mapContainer {
-
+    display: flex;
+    justify-content: end;
     height: 300px;
     width: 400px;
 }

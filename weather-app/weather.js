@@ -46,4 +46,8 @@ function insertWeather(weatherInfo) {
 }
 
 var map = L.map("mapContainer").setView([0, 0], 0);
-L.titleLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png?", {}).addTo(map);
+L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+	maxZoom: 19,
+	attribution:
+		'&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+}).addTo(map);
