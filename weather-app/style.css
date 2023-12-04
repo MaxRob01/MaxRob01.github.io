@@ -6,10 +6,22 @@
     background: linear-gradient(#ABC7D9, #003049);
 }
 
+.inputButtonContainer {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    background: rgba(255, 255, 255, 0.1);
+    border: #fff;
+    border-radius: 10px;
+    margin-bottom: 5px;
+}
+
 .buttonCardContainer {
     display: grid;
     grid-gap: 1px;
     justify-content: center;
+
 }
 
 h1 {
@@ -26,10 +38,14 @@ h1 {
 
 input {
     border: #FEF8EC;
+    background-color: rgb(254, 248, 236, 0.4);
     border-radius: 7px;
-    margin-bottom: 10px;
     margin-right: 5px;
     height: 30px;
+    width: 850%;
+    font-size: 15px;
+    color: #003049;
+
 }
 
 .btn {
@@ -38,23 +54,23 @@ input {
     height: 30px;
     font-size: 13px;
     color: #003049;
-    margin-bottom: 5px;
+
 }
 
 .btn:hover {
-    background-color: #A1BAB4;
+    background-color: #ABC7D9;
 }
 
 .weatherInfoContainer {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(255, 255, 255, 0.3);
     width: 200px;
     height: 200px;
-    margin: 10px;
-    border-radius: 20px;
-    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 1px 8px 0 rgba(0, 0, 0, 0.19);
+    margin: 5px;
+    background: rgba(255, 255, 255, 0.1);
+    border: #fff;
+    border-radius: 10px;
 }
 
 .weatherInfo {
@@ -80,7 +96,8 @@ h3 {
     display: flex;
     justify-content: center;
     align-items: center;
-    max-width: 300px;
+    margin-bottom: 5px;
+    width: 410px;
     min-height: 200px;
     background: rgba(255, 255, 255, 0.1);
     border: #fff;
