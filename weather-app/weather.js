@@ -1,6 +1,8 @@
 function getCity() {
 	var city = document.getElementById("yourCity").value;
+	city = city.charAt(0).toUpperCase() + city.slice(1);
 	document.getElementById("title").innerHTML = city;
+	document.getElementById("yourCity").value = "";
 	return city;
 }
 
@@ -21,7 +23,7 @@ async function getWeatherInfo(locationData, type) {
 		}
 
 		let data = await response.json();
-		console.log(data)
+		console.log(data);
 		return data;
 	} catch (error) {
 		console.error("Error fetching weather data: ", error);
@@ -68,8 +70,6 @@ map.on("click", handleClickOnMap);
 async function handleClickOnMap(ev) {
 	var latLng = getlatLong(ev);
 	var weatherInfo = await getWeatherInfo(latLng, "coords");
+
 	insertWeather(weatherInfo);
-
-	console.log(weatherInfo);
 }
-
