@@ -1,6 +1,6 @@
 function getCity() {
 	var city = document.getElementById("yourCity").value;
-
+	document.getElementById("title").innerHTML = city;
 	return city;
 }
 
@@ -72,3 +72,4 @@ async function handleClickOnMap(ev) {
 
 	console.log(weatherInfo);
 }
+
