@@ -66,7 +66,7 @@ input {
     justify-content: center;
     align-items: center;
     width: 200px;
-    height: 200px;
+    height: 105px;
     margin: 5px;
     background: rgba(255, 255, 255, 0.1);
     border: #fff;
@@ -98,7 +98,7 @@ h3 {
     align-items: center;
     margin-bottom: 5px;
     width: 410px;
-    min-height: 200px;
+    min-height: 175px;
     background: rgba(255, 255, 255, 0.1);
     border: #fff;
     border-radius: 10px;
