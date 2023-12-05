@@ -1,3 +1,13 @@
+// Add logic to submit on enter press
+document
+	.getElementById("yourCity")
+	.addEventListener("keypress", function (event) {
+		if (event.key === "Enter") {
+			event.preventDefault();
+			handleRequest();
+		}
+	});
+
 function getCity() {
 	var city = document.getElementById("yourCity").value;
 	city = city.charAt(0).toUpperCase() + city.slice(1);
