@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" type="text/css" href="mac-style.css" />
+		<link
+			rel="stylesheet"
+			href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+		/>
+
+		<title>mac calculator</title>
+	</head>
+	<body>
+		<div class="container mt-2">
+				<div class="row">
+					<input class="col-12" type="text" id="display" readonly />
+				</div>
+				<div class="row">
+					<button class="button col-3" value="AC">AC</button>
+					<button class="button col-3" value="±">±</button>
+					<button class="button col-3" value="%">%</button>
+					<button class="button col-3" onclick="getOperator(this.value)" value="÷">÷</button>
+				</div>
+				<div class="row">
+					<button class="button-num col-3" onclick="getButtonValue(this.value)"  value="7">7</button>
+					<button class="button-num col-3" onclick="getButtonValue(this.value)"  value="8">8</button>
+					<button class="button-num col-3" onclick="getButtonValue(this.value)"  value="9">9</button>
+					<button class="button col-3" onclick="getOperator(this.value)" value="*">*</button>
+				</div>
+				<div class="row">
+					<button class="button-num col-3" onclick="getButtonValue(this.value)"  value="4">4</button>
+					<button class="button-num col-3" onclick="getButtonValue(this.value)"  value="5">5</button>
+					<button class="button-num col-3" onclick="getButtonValue(this.value)"  value="6">6</button>
+					<button class="button col-3" onclick="getOperator(this.value)" value="-">-</button>
+				</div>
+				<div class="row">
+					<button class="button-num col-3" onclick="getButtonValue(this.value)"  value="1">1</button>
+					<button class="button-num col-3" onclick="getButtonValue(this.value)"  value="2">2</button>
+					<button class="button-num col-3" onclick="getButtonValue(this.value)"  value="3">3</button>
+					<button class="button col-3" onclick="getOperator(this.value)" value="=">+</button>
+				</div>
+				<div class="row">
+					<button class="button-num col-6" onclick="getButtonValue(this.value)" value="0">0</button>
+					<button class="button col-3" value=",">,</button>
+					<button class="button col-3"  value="=">=</button>
+				</div>
+			</div>
+		</div>
+		<script src="mac-calculator.js"></script>
+	</body>
+</html>
