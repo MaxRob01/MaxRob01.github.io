@@ -17,9 +17,9 @@
 					<input class="col-12" type="text" id="display" readonly />
 				</div>
 				<div class="row">
-					<button class="button col-3" value="AC">AC</button>
+					<button class="button col-3" onclick="clearInput()" value="AC">AC</button>
 					<button class="button col-3" value="±">±</button>
-					<button class="button col-3" value="%">%</button>
+					<button class="button col-3" onclick="getOperator(this.value)" value="%">%</button>
 					<button class="button col-3" onclick="getOperator(this.value)" value="÷">÷</button>
 				</div>
 				<div class="row">
