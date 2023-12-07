@@ -15,7 +15,7 @@ function getButtonValue(value) {
 		isSecondValue = false;
 	}
 
-	console.log(valor1, valor2);
+	//console.log(valor1, valor2);
 	return value;
 }
 
@@ -26,10 +26,24 @@ function getButtonValue(value) {
 function getOperator(value) {
 	document.getElementById("display").value = value;
 	operator = value;
-console.log(operator)
 }
 
-
+function operation() {
+	if (operator == "+") {
+		result = Number(valor1) + Number(valor2);
+		//console.log(result);
+	} else if (operator == "-") {
+		result = Number(valor1) - Number(valor2);
+		//console.log(result);
+	} else if (operator == "*") {
+		result = Number(valor1) * Number(valor2);
+		//console.log(result);
+	} else if (operator == "÷") {
+		result = Number(valor1) / Number(valor2);
+		//console.log(result);
+	}
+	return result
+}
 
 //cuando hago click en el boton de la operacion guardar el valor del input en una variable y guardar la operacion en una segunda variable
 //crar una funcion "operacion"
