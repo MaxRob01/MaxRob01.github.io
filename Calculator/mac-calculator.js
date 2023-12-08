@@ -5,25 +5,24 @@ var operator;
 var result;
 
 function getButtonValue(value) {
-	document.getElementById("display").value = value;
-
 	if (isSecondValue == false) {
-		valor1 = value;
-		isSecondValue = true;
+		valor1 ? (valor1 = valor1 + value) : (valor1 = value);
+		document.getElementById("display").value = valor1;
 	} else if (isSecondValue == true) {
-		valor2 = value;
-		isSecondValue = false;
+		valor2 ? (valor2 = valor2 + value) : (valor2 = value);
+		document.getElementById("display").value = valor2;
 	}
 	return value;
 }
 
 function clearInput() {
-	document.getElementById("display").value = "";
+	valor1 = document.getElementById("display").value = "";
 }
 
 function getOperator(value) {
 	document.getElementById("display").value = value;
 	operator = value;
+	isSecondValue = true;
 }
 
 function operation() {
@@ -36,10 +35,15 @@ function operation() {
 	} else if (operator == "÷") {
 		result = Number(valor1) / Number(valor2);
 	} else if (operator == "%") {
-		result = (Number(valor1) * Number(valor2)) / 100;
+		result = (Number(valor2) * Number(valor1)) / 100;
 	}
 	document.getElementById("display").value = result;
 	return result;
 }
 
+function switchSign() {
+	var inputNumb = document.getElementById("display").value;
+	var numberSign = inputNumb * -1;
+	var inputNumb = (document.getElementById("display").value = numberSign);
+}
 

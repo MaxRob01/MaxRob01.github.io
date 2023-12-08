@@ -19,7 +19,7 @@
 				</div>
 				<div class="row">
 					<button class="button  col-3" onclick="clearInput()" value="AC">AC</button>
-					<button class="button  col-3" value="±">±</button>
+					<button class="button  col-3" onclick="switchSign ()" value="−/+">−/+</button>
 					<button class="button  col-3" onclick="getOperator(this.value)" value="%">%</button>
 					<button class="button  col-3" onclick="getOperator(this.value)" value="÷">÷</button>
 				</div>
@@ -43,7 +43,7 @@
 				</div>
 				<div class="row">
 					<button class="button  col-6" onclick="getButtonValue(this.value)" value="0">0</button>
-					<button class="button  col-3" value=",">,</button>
+					<button class="button  col-3" onclick="getButtonValue(this.value)" value=".">.</button>
 					<button class="button  col-3"  onclick="operation()" value="=">=</button>
 				</div>
 			</div>

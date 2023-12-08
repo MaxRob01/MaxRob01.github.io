@@ -1,14 +1,8 @@
 .container {
- 
- 
-    border: solid 1px;
-    background-color: #14213d;
-  
+    border: solid 1px;  
 }
 
 .button {
     border: solid 1px;
     border-radius: 100px;
-    display: center;
-    justify-content: center;
 }
