@@ -3,6 +3,7 @@ var valor2;
 var isSecondValue = false;
 var operator;
 var result;
+var valor3 = "";
 
 function getButtonValue(value) {
 	if (isSecondValue == false) {
@@ -28,6 +29,7 @@ function getOperator(value) {
 	document.getElementById("display").value = value;
 	operator = value;
 	isSecondValue = true;
+	valor2 = "";
 }
 
 function switchSign() {
@@ -54,4 +56,3 @@ function equal() {
 	document.getElementById("display").value = result;
 	valor1 = result;
 }
-
