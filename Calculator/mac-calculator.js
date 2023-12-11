@@ -3,7 +3,6 @@ var valor2;
 var isSecondValue = false;
 var operator;
 var result;
-var valor3 = "";
 
 function getButtonValue(value) {
 	if (isSecondValue == false) {
