@@ -6,14 +6,14 @@ const TextContainer = () => {
   const [highlightedText, setHighlightedText] = useState('');
   const [correct, setCorrect] = useState(true); // Assuming the initial text is correct
 
-  // Example text for typing practice
+
   const practiceText = "React has been designed from the start for gradual adoption, and you can use as little or as much React as you need";
 
   useEffect(() => {
-    // Update highlightedText based on the length of inputValue
+
     setHighlightedText(practiceText.slice(0, inputValue.length));
 
-    // Check if the typed text matches the practice text
+
     if (practiceText.startsWith(inputValue)) {
       setCorrect(true);
     } else {
@@ -30,11 +30,9 @@ const TextContainer = () => {
       <h1>Typing Speed App</h1>
       <div>
         <p>
-          {/* Display the highlighted text */}
           <span style={{ color: correct ? 'black' : 'red' }}>
             {highlightedText}
           </span>
-          {/* Display the remaining text */}
           {practiceText.slice(inputValue.length)}
         </p>
         <input
