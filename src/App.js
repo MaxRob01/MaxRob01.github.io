@@ -1,10 +1,10 @@
 import "./App.css";
-import TextContainer from "./Text-container";
-import Sidebar from "./Sidebar";
-import Footer from "./Footer";
-import Header from "./Header";
-import Body from "./Body";
-import MainContainer from "./MainContainer";
+import TextContainer from "./components/Text-container";
+import Sidebar from "./components/Sidebar";
+import Footer from "./components/Footer";
+import Header from "./components/Header";
+import Body from "./components/Body";
+import MainContainer from "./components/MainContainer";
 
 function App() {
 	return (
