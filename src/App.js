@@ -15,7 +15,6 @@ function App() {
 				<Sidebar></Sidebar>
 				<TextContainer></TextContainer>
 				<Sidebar>
-					{" "}
 					<Timer />
 				</Sidebar>
 			</Body>

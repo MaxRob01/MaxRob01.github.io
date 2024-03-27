@@ -3,6 +3,13 @@ import React, { useState, useEffect } from "react";
 function Timer() {
 	const [timerValue, setTimerValue] = useState(60);
 	const [running, setRunning] = useState(false);
+
+	useEffect(() => {
+		const startTimer = () => setRunning(true);
+		window.addEventListener("keydown", startTimer);
+		return () => window.removeEventListener("keydown", startTimer);
+	}, []);
+
 	useEffect(() => {
 		const timer =
 			timerValue > 0 &&
@@ -16,9 +23,6 @@ function Timer() {
 	return (
 		<div>
 			<h1>Tiempo: {timerValue}</h1>
-			<button onClick={() => setRunning(!running)}>
-				{running ? "Stop" : "Start"}
-			</button>
 		</div>
 	);
 }
