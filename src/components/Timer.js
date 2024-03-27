@@ -22,6 +22,7 @@ function Timer() {
 
 	const restartTimer = () => {
 		setTimerValue(60);
+		setRunning(false);
 	};
 
 	return (
