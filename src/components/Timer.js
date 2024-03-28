@@ -20,15 +20,9 @@ function Timer() {
 	}, [timerValue, running]);
 	console.log("works");
 
-	const restartTimer = () => {
-		setTimerValue(60);
-		setRunning(false);
-	};
-
 	return (
 		<div>
 			<h1>Tiempo: {timerValue}</h1>
-			<button onClick={restartTimer}>Restart</button>
 		</div>
 	);
 }
