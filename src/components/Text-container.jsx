@@ -24,7 +24,7 @@ const TextContainer = () => {
   useEffect(() => {
     let currentText = getCurrentText();
     setHighlightedText(currentText.slice(0, inputValue.length));
-
+    console.log(currentText)
     if (currentText.startsWith(inputValue)) {
       setCorrect(true);
       if (!timerStarted) {
@@ -69,6 +69,10 @@ const TextContainer = () => {
           {getCurrentText().slice(inputValue.length)}
         </p>
         <input
+        style={{
+						width: "100%",
+					
+					}}
           type="text"
           value={inputValue}
           onChange={handleChange}

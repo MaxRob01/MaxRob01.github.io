@@ -11,14 +11,14 @@ function Timer() {
 	}, []);
 
 	useEffect(() => {
-		const timer =
-			timerValue > 0 &&
-			running &&
-			setInterval(() => setTimerValue(timerValue - 1), 1000);
-
+		let timer;
+		if (timerValue > 0 && running) {
+			timer = setInterval(() => setTimerValue(timerValue - 1), 1000);
+		} else if (timerValue === 0 && running) {
+			alert("Time up!");
+		}
 		return () => clearInterval(timer);
 	}, [timerValue, running]);
-	console.log("works");
 
 	return (
 		<div>
